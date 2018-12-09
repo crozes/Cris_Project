@@ -24,7 +24,7 @@ if ($result->num_rows > 0)
           <img class="card-img-top" src="'.$row["ImagesPath"].'" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">'.$row["CategoriesName"].'</h5>
-            <p class="card-text">Blablabla</p>
+            <p class="card-text">'.$row["CategoriesDescription"].'</p>
             <a href="produs.php?categorie=Categorie" class="btn btn-primary">Go ahead !</a>
           </div>
         </div>';

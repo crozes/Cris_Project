@@ -34,7 +34,8 @@ CREATE TABLE Images (
 
 CREATE TABLE Categories (
     CategoriesId INT NOT NULL AUTO_INCREMENT,
-    CategoriesName VARCHAR(255),
+    CategoriesName VARCHAR(255) NOT NULL,
+    CategoriesDescription TEXT NOT NULL,
     ImagesId INT NOT NULL,
     PRIMARY KEY (CategoriesId),
     CONSTRAINT Fk_CategoriesImages FOREIGN KEY (ImagesId) REFERENCES Images(ImagesId)
@@ -44,6 +45,7 @@ CREATE TABLE Products(
     ProductsId INT NOT NULL AUTO_INCREMENT,
     ProductsName VARCHAR(255),
     ProductsPrice FLOAT,
+    ProductsDescription TEXT NOT NULL,
     CategoriesId INT NOT NULL,
     ImagesId INT NOT NULL,
     PRIMARY KEY (ProductsId),
@@ -60,10 +62,10 @@ INSERT INTO Images (ImagesName, ImagesPath) VALUES ('technologyCategory','img/Ca
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('makeupCategory','img/Categories/makeup.jpg');
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('materialsCategory','img/Categories/materials.jpg');
 
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Food',1);
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Technology',2);
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Makeup',3);
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Materials',4);
+INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Food','blablabla',1);
+INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Technology','blablabla',2);
+INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Makeup','blablabla',3);
+INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Materials','blablabla',4);
 
 SELECT *
 FROM Categories c, Images i
