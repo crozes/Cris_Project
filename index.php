@@ -25,14 +25,16 @@ if ($result->num_rows > 0)
           <div class="card-body">
             <h5 class="card-title">'.$row["CategoriesName"].'</h5>
             <p class="card-text">'.$row["CategoriesDescription"].'</p>
-            <a href="produs.php?categorie=Categorie" class="btn btn-primary">Go ahead !</a>
+            <a href="produs.php?categorie='.$row["CategoriesName"].'" class="btn btn-primary">Go ahead !</a>
           </div>
         </div>';
   }
-}else{
-  echo "erreur";
 }
-
+else
+{
+  echo "Error";
+}
+mysqli_close($conn)
 ?>
 
 <!DOCTYPE html>
