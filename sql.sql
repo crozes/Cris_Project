@@ -45,9 +45,9 @@ CREATE TABLE Products(
     ProductsName VARCHAR(255),
     ProductsPrice FLOAT,
     CategoriesId INT NOT NULL,
-    ImageId INT NOT NULL,
+    ImagesId INT NOT NULL,
     PRIMARY KEY (ProductsId),
-    CONSTRAINT Fk_ProductsImages FOREIGN KEY (ImageId) REFERENCES Images(ImageId),
+    CONSTRAINT Fk_ProductsImages FOREIGN KEY (ImagesId) REFERENCES Images(ImagesId),
     CONSTRAINT Fk_ProductsCategories FOREIGN KEY (CategoriesId) REFERENCES Categories(CategoriesId)
 );
 
@@ -60,7 +60,11 @@ INSERT INTO Images (ImagesName, ImagesPath) VALUES ('technologyCategory','img/Ca
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('makeupCategory','img/Categories/makeup.jpg');
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('materialsCategory','img/Categories/materials.jpg');
 
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('food',1);
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('technology',2);
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('makeup',3);
-INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('materials',4);
+INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Food',1);
+INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Technology',2);
+INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Makeup',3);
+INSERT INTO Categories (CategoriesName, ImagesId) VALUES ('Materials',4);
+
+SELECT *
+FROM Categories c, Images i
+WHERE c.ImagesId = i.ImagesId;
