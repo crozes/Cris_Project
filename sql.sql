@@ -61,7 +61,25 @@ INSERT INTO Images (ImagesName, ImagesPath) VALUES ('foodCategory','img/Categori
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('technologyCategory','img/Categories/technology.jpg');
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('makeupCategory','img/Categories/makeup.jpg');
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('materialsCategory','img/Categories/materials.jpg');
+------------------------------------------------------------------------------------------------------------
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('delicatessen','img/Products/food2.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('asian','img/Products/food3.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('sushi','img/Products/food4.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('mediterranan prod','img/Products/food5.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('android','img/Products/tech2.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('supercomputer','img/Products/tech3.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('watch','img/Products/tech4.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('car','img/Products/tech5.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('makeup2','img/Products/makeup2.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('makeup3','img/Products/makeup3.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('makeup4','img/Products/makeup4.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('makeup5','img/Products/makeup5.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('scissor','img/Products/scissor.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('pen','img/Products/pen.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('glue','img/Products/glue.jpg')
+INSERT INTO Images (ImagesName, ImagesPath) VALUES('eraser','img/Products/eraser.jpg')
 
+---------------------------------------------------------------------------------------------------------------
 INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Food','blablabla',1);
 INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Technology','blablabla',2);
 INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Makeup','blablabla',3);
