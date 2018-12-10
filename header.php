@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="cssFa/fontawesome-free-5.5.0-web/css/all.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/myStyle.css" />
     <script src="js/bootstrap.js"></script>
+    <script src="js/jQuery.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
@@ -18,7 +19,7 @@
     <i class="fas fa-search text-light"></i>
   </form>
   <div>
-    <a href="#" class="headerButton"><i class="fa fa-shopping-cart ml-3 mr-3 text-light" aria-hidden="true"><span class="badge badge-danger mr-2 ml-2" id="cart-number">0</span></i></a>
+    <a href="shoppingcart.php" class="headerButton"><i class="fa fa-shopping-cart ml-3 mr-3 text-light" aria-hidden="true"><span class="badge badge-danger mr-2 ml-2" id="cart-number">0</span></i></a>
     <a href="login.php" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">LogIn</a>
     <a href="signup.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Sign Up</a>
   </div>

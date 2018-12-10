@@ -31,7 +31,7 @@
                         </div>
                         <div class="card-footer text-muted text-center">
                             <h2 class="text-center"><span class="badge badge-danger">'.$row["ProductsPrice"].' €</span></h2>
-                            <a href="#" class="btn btn-outline-dark">Add in my cart</a>
+                            <a href="#" id="'.$row["ProductsId"].'" class="btn btn-outline-dark" onclick="addPanier()">Add in my cart</a>
                         </div>
                       </div>';
             $descCat = $row["CategoriesDescription"];
@@ -63,4 +63,11 @@
   </div>
 </div>
 </body>
+<script type="text/javascript">
+    function addPanier(){ 
+        var test = parseInt($('#cart-number').text());
+        test += 1;
+        $('#cart-number').text(test);
+    }
+</script>
 </html>
