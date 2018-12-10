@@ -84,6 +84,38 @@ INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES 
 INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Technology','blablabla',2);
 INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Makeup','blablabla',3);
 INSERT INTO Categories (CategoriesName, CategoriesDescription, ImagesId) VALUES ('Materials','blablabla',4);
+---------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Delicatessen', 50.00,'Très belle table d apero entre amis. (bonne traduction)',1,5);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Asian', 51.00,'Très belle table de plat tipiquement asiatique à deguster entre amis. (bonne traduction)',1,6);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Sushi', 52.00,'Très belle assiette de sushi japonais à deguster entre amis. (bonne traduction)',1,7);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Mediterranan', 53.00,'Très belle assortiment de produit méditéranéen à déguster entre amis. (bonne traduction)',1,8);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Android', 54.00,'Voici votre nouveau compagnon fidèle, solide et repondant à tous vos besoins. (bonne traduction)',2,9);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Supercomputer', 55.00,'Voici un supercalculateur au performances de calcul extrème.  (bonne traduction)',2,10);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Watch', 56.00,'Voici votre nouvelles montre connectée dernière génération ... (bonne traduction)',2,11);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Car', 57.00,'Voici votre nouvelle voiture électrique 100% autonome . (bonne traduction)',2,12);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Makeup 2', 58.00,'Voici votre nouveau kit de maquillage qui sera vous rendre plsu rayonnante que jamais. (bonne traduction)',3,13);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Makeup 3', 59.00,'Voici votre nouveau kit de maquillage qui sera vous rendre plsu rayonnante que jamais. (bonne traduction)',3,14);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Makeup 4', 60.00,'Voici votre nouveau kit de maquillage qui sera vous rendre plsu rayonnante que jamais. (bonne traduction)',3,15);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Makeup 5', 61.00,'Voici votre nouveau kit de maquillage qui sera vous rendre plsu rayonnante que jamais. (bonne traduction)',3,16);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Scissor', 62.00,'Voici nos ciseaux pour bien débuter en découpage en tout genre . (bonne traduction)',4,17);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Pen', 63.00,'Voici votre nouveau stylos dragon qui rendra jaloux tous vos amis. (bonne traduction)',4,18);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Glue', 64.00,'Voici de la colle, c est juste de la colle... (bonne traduction)',4,19);
+INSERT INTO Products ( ProductsName, ProductsPrice, ProductsDescription, CategoriesId,ImagesId) VALUES ('Eraser', 65.00,' Gomme de très bonne qualitées effacera jusqu a vos problèmes... (bonne traduction)',4,20);
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 SELECT *
 FROM Categories c, Images i
