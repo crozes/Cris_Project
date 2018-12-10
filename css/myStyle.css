@@ -1,3 +1,15 @@
-.headerButton:hover {
-    color: #dae0e5 !important;
+.Food_background{
+    background-image: url("img/Categories/food.jpg");
+}
+
+.Technology_background{
+    background-image: url("img/Categories/technology.jpg");
+}
+
+.Makeup_background{
+    background-image: url("img/Categories/makeup.jpg");
+}
+
+.Materials_background{
+    background-image: url("img/Categories/materials.jpg");
 }
