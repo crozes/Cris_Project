@@ -1,12 +1,11 @@
 CREATE DATABASE IF NOT EXISTS myStore;
 USE myStore;
 
-DROP TABLE IF EXISTS Logins;
-
-DROP TABLE IF EXISTS Users;
-DROP TABLE IF EXISTS Orders;
-DROP TABLE IF EXISTS Products;
 DROP TABLE IF EXISTS Orders_Products;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Products;
+
 DROP TABLE IF EXISTS Categories;
 DROP TABLE IF EXISTS Images;
 
@@ -36,13 +35,6 @@ CREATE TABLE Categories (
     CONSTRAINT Fk_CategoriesImages FOREIGN KEY (ImagesId) REFERENCES Images(ImagesId)
 );
 
-CREATE TABLE Orders_Products(
-    ProductsId INT NOT NULL,
-    OrdersId INT NOT NULL,
-    CONSTRAINT Fk_OrdersProducts_Products FOREIGN KEY (ProductsId) REFERENCES Products(ProductsId),
-    CONSTRAINT Fk_OrdersProducts_Orders FOREIGN KEY (OrdersId) REFERENCES Orders(OrdersId)
-);
-
 CREATE TABLE Products(
     ProductsId INT NOT NULL AUTO_INCREMENT,
     ProductsName VARCHAR(255),
@@ -61,6 +53,13 @@ CREATE TABLE Orders(
     UsersId INT NOT NULL,
     PRIMARY KEY (OrdersId),
     CONSTRAINT Fk_OrdersUsers FOREIGN KEY (UsersId) REFERENCES Users(UsersId)
+);
+
+CREATE TABLE Orders_Products(
+    ProductsId INT NOT NULL,
+    OrdersId INT NOT NULL,
+    CONSTRAINT Fk_OrdersProducts_Products FOREIGN KEY (ProductsId) REFERENCES Products(ProductsId),
+    CONSTRAINT Fk_OrdersProducts_Orders FOREIGN KEY (OrdersId) REFERENCES Orders(OrdersId)
 );
 
 INSERT INTO Users (UsersFirstName, UsersLasttName,UsersMail,UsersPass) VALUES ('admin','admin','admin@admin.com','admin');
