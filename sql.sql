@@ -1,28 +1,23 @@
 CREATE DATABASE IF NOT EXISTS myStore;
 USE myStore;
 
-DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Logins;
+
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Orders;
 DROP TABLE IF EXISTS Products;
+DROP TABLE IF EXISTS Orders_Products;
 DROP TABLE IF EXISTS Categories;
 DROP TABLE IF EXISTS Images;
 
-CREATE TABLE Logins (
-    LoginsId INT NOT NULL AUTO_INCREMENT,
-    LoginsName VARCHAR(255) NOT NULL,
-    LoginPass VARCHAR(255) NOT NULL,
-    PRIMARY KEY (LoginsId)
-);
 
 CREATE TABLE Users (
     UsersId INT NOT NULL AUTO_INCREMENT,
     UsersFirstName VARCHAR(255) NOT NULL,
     UsersLasttName VARCHAR(255) NOT NULL,
-    UsersBirth DATE NOT NULL,
     UsersMail VARCHAR(255) NOT NULL,
-    LoginsID INT NOT NULL,
-    PRIMARY KEY (UsersId),
-    CONSTRAINT Fk_UsersLogin FOREIGN KEY (LoginsId) REFERENCES Logins(LoginsId)
+    UsersPass VARCHAR(1000) NOT NULL,
+    PRIMARY KEY (UsersId)
 );
 
 CREATE TABLE Images (
@@ -41,6 +36,13 @@ CREATE TABLE Categories (
     CONSTRAINT Fk_CategoriesImages FOREIGN KEY (ImagesId) REFERENCES Images(ImagesId)
 );
 
+CREATE TABLE Orders_Products(
+    ProductsId INT NOT NULL,
+    OrdersId INT NOT NULL,
+    CONSTRAINT Fk_OrdersProducts_Products FOREIGN KEY (ProductsId) REFERENCES Products(ProductsId),
+    CONSTRAINT Fk_OrdersProducts_Orders FOREIGN KEY (OrdersId) REFERENCES Orders(OrdersId)
+);
+
 CREATE TABLE Products(
     ProductsId INT NOT NULL AUTO_INCREMENT,
     ProductsName VARCHAR(255),
@@ -53,9 +55,15 @@ CREATE TABLE Products(
     CONSTRAINT Fk_ProductsCategories FOREIGN KEY (CategoriesId) REFERENCES Categories(CategoriesId)
 );
 
-INSERT INTO Logins (LoginsName, LoginPass) VALUES ('admin','admin');
+CREATE TABLE Orders(
+    OrdersId INT NOT NULL AUTO_INCREMENT,
+    OrdersNumber VARCHAR(255),
+    UsersId INT NOT NULL,
+    PRIMARY KEY (OrdersId),
+    CONSTRAINT Fk_OrdersUsers FOREIGN KEY (UsersId) REFERENCES Users(UsersId)
+);
 
-INSERT INTO Users (UsersFirstName, UsersLasttName,UsersBirth,UsersMail,LoginsID) VALUES ('admin','admin','1997-5-27','admin@admin.com',1);
+INSERT INTO Users (UsersFirstName, UsersLasttName,UsersMail,UsersPass) VALUES ('admin','admin','admin@admin.com','admin');
 
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('foodCategory','img/Categories/food.jpg');
 INSERT INTO Images (ImagesName, ImagesPath) VALUES ('technologyCategory','img/Categories/technology.jpg');
