@@ -2,18 +2,6 @@
     $categorie = $_GET["categorie"];
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Products</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="cssFa/fontawesome-free-5.5.0-web/css/all.css" />
-    <script src="js/bootstrap.js"></script>
-</head>
-<body>
 <?php include 'header.php' ?>
 <div class="container-fluid p-4">
   <div class="row">
