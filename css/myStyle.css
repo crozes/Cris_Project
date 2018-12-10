@@ -1,15 +1,36 @@
 .Food_background{
-    background-image: url("img/Categories/food.jpg");
+    background-image: url("../img/Categories/food.jpg");
+    
 }
 
 .Technology_background{
-    background-image: url("img/Categories/technology.jpg");
+    background-image: url("../img/Categories/technology.jpg");
 }
 
 .Makeup_background{
-    background-image: url("img/Categories/makeup.jpg");
+    background-image: url("../img/Categories/makeup.jpg");
 }
 
 .Materials_background{
-    background-image: url("img/Categories/materials.jpg");
+    background-image: url("../img/Categories/materials.jpg");
+}
+
+.BackgrounGlob{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.test{
+    position: relative;
+    z-index: 1;
 }

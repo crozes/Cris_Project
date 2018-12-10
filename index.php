@@ -25,6 +25,8 @@
             <div class="card-body">
               <h5 class="card-title text-center">'.$row["CategoriesName"].'</h5>
               <p class="card-text">'.$row["CategoriesDescription"].'</p>
+            </div>
+            <div class="card-footer text-muted text-center">
               <a href="produs.php?categorie='.$row["CategoriesName"].'" class="btn btn-outline-secondary">Go ahead !</a>
             </div>
           </div>';
