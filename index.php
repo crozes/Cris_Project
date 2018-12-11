@@ -1,22 +1,10 @@
 <?php
-  $servername = "localhost:8889";
-  $username = "root";
-  $password = "root";
-  $dbname = "myStore";
-  // Create connection
-  $conn = new mysqli($servername, $username, $password,$dbname);
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
-  else{
-    //echo "OK";
-  }
+  include 'config.php';
 
   $query = "SELECT * FROM Categories c, Images i WHERE c.ImagesId = i.ImagesId;";
   $result = $conn->query($query);
   $card = "";
-  /* Requête "Select" retourne un jeu de résultats */
+
   if ($result->num_rows > 0)
   {
     while($row = $result->fetch_assoc()) {

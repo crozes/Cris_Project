@@ -1,12 +1,7 @@
 <?PHP
     $categorie = $_GET["categorie"];
 
-    $servername = "localhost:8889";
-    $username = "root";
-    $password = "root";
-    $dbname = "myStore";
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
+    include 'config.php';
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

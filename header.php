@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  $session_opened = '';
+  if(isset($_SESSION)){
+    $session_opened = '<span class="text-light">Hello, '.$_SESSION['login_user'].' </span><a href="logout.php" class="btn btn-danger btn-sm" role="button" aria-pressed="true">Log Out</a>';
+  }else{
+    $session_opened = '<a href="login.php" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">LogIn</a>
+    <a href="signup.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Sign Up</a>';
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +31,6 @@
   </form>
   <div>
     <a href="shoppingcart.php" class="headerButton"><i class="fa fa-shopping-cart ml-3 mr-3 text-light" aria-hidden="true"><span class="badge badge-danger mr-2 ml-2" id="cart-number">0</span></i></a>
-    <a href="login.php" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">LogIn</a>
-    <a href="signup.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Sign Up</a>
+    <?php echo $session_opened?>
   </div>
 </nav>
